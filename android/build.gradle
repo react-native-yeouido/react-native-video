@@ -45,9 +45,9 @@ println "useExoplayerIMA:" + useExoplayerIMA
 // As react native build output directory is react-native path of the module.
 // We need to force a new path on each configuration change.
 // If you add a new build parameter, please add the new value in this string
-def configStringPath = (
-        'useExoplayerIMA' + useExoplayerIMA \
-).md5()
+// def configStringPath = (
+//         'useExoplayerIMA' + useExoplayerIMA \
+// ).md5()
 
 if (isNewArchitectureEnabled()) {
     apply plugin: "com.facebook.react"
@@ -99,7 +99,7 @@ android {
         exclude "**/libreact_render*.so"
     }
 
-    buildDir 'buildOutput_' + configStringPath
+    // buildDir 'buildOutput_' + configStringPath
 
     sourceSets {
         main {

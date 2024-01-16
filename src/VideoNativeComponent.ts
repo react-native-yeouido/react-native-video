@@ -193,61 +193,53 @@ export type OnPlaybackStateChangedData = Readonly<{
   isPlaying: boolean;
 }>;
 
-export type OnTimedMetadataData = Readonly<{}>;
-// export type OnTimedMetadataData = Readonly<{
-//   metadata: ReadonlyArray<
-//     Readonly<{
-//       value?: string;
-//       identifier: string;
-//     }>
-//   >;
-// }>;
+// export type OnTimedMetadataData = Readonly<{}>;
+export type OnTimedMetadataData = Readonly<{
+  metadata: {
+    value?: string;
+    identifier: string;
+  }[]
+}>;
 
-export type OnAudioTracksData = Readonly<{}>;
-// export type OnAudioTracksData = Readonly<{
-//   audioTracks: ReadonlyArray<
-//     Readonly<{
-//       index: Int32;
-//       title?: string;
-//       language?: string;
-//       bitrate?: Float;
-//       type?: string;
-//       selected?: boolean;
-//     }>
-//   >;
-// }>;
+// export type OnAudioTracksData = Readonly<{}>;
+export type OnAudioTracksData = Readonly<{
+  audioTracks: {
+    index: Int32;
+    title?: string;
+    language?: string;
+    bitrate?: Float;
+    type?: string;
+    selected?: boolean;
+  }[]
+}>;
 
-export type OnTextTracksData = Readonly<{}>;
-// export type OnTextTracksData = Readonly<{
-//   textTracks: ReadonlyArray<
-//     Readonly<{
-//       index?: Int32;
-//       title?: string;
-//       language?: string;
-//       /**
-//        * iOS only supports VTT, Android supports all 3
-//        */
-//       // string
-//       // type?: OnTextTracksTypeData;
-//       type?: string;
-//       selected?: boolean;
-//     }>
-//   >;
-// }>;
+// export type OnTextTracksData = Readonly<{}>;
+export type OnTextTracksData = Readonly<{
+  textTracks: {
+    index?: Int32;
+    title?: string;
+    language?: string;
+    /**
+     * iOS only supports VTT, Android supports all 3
+     */
+    // string
+    // type?: OnTextTracksTypeData;
+    type?: string;
+    selected?: boolean;
+  }[]
+}>;
 
-export type OnVideoTracksData = Readonly<{}>;
-// export type OnVideoTracksData = Readonly<{
-//   videoTracks: ReadonlyArray<
-//     Readonly<{
-//       trackId: Int32;
-//       codecs?: string;
-//       width?: Float;
-//       height?: Float;
-//       bitrate?: Float;
-//       selected?: boolean;
-//     }>
-//   >;
-// }>;
+// export type OnVideoTracksData = Readonly<{}>;
+export type OnVideoTracksData = Readonly<{
+  videoTracks: {
+    trackId: Int32;
+    codecs?: string;
+    width?: Float;
+    height?: Float;
+    bitrate?: Float;
+    selected?: boolean;
+  }[]
+}>;
 
 export type OnPlaybackData = Readonly<{
   playbackRate: Float;

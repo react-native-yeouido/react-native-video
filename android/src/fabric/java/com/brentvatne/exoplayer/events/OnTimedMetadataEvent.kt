@@ -24,7 +24,7 @@ class OnTimedMetadataEvent(viewTag: Int, private val metadata: ArrayList<TimedMe
 
         val event = Arguments.createMap()
         // @todo: temporarily remove put array on event callback parameter (codegen issue)
-        // event.putArray(EVENT_PROP_TIMED_METADATA, metadataArray)
+         event.putArray(EVENT_PROP_TIMED_METADATA, metadataArray)
         rctEventEmitter?.receiveEvent(viewTag, getEventName(), event)
     }
 }
